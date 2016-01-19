@@ -17,7 +17,8 @@ namespace TodoListService
                     TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidAudience = ConfigurationManager.AppSettings["ida:Audience"],
-                        RoleClaimType = "roles"
+                        RoleClaimType = "roles",
+                        ValidateIssuer = false
                     },
                     Tenant = ConfigurationManager.AppSettings["ida:Tenant"],
                     AuthenticationType = "OAuth2Bearer"
